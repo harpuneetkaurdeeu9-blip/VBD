@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>For Your 17th Birthday ❤️</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden}
+body{font-family:Georgia,"Times New Roman",serif;background:#09070d;color:#fff}
+.scene{position:absolute;inset:0;display:none;align-items:center;justify-content:center;text-align:center;padding:25px;background:
+radial-gradient(circle at 50% 35%,rgba(245,180,210,.12),transparent 28%),
+radial-gradient(circle at 15% 80%,rgba(170,150,255,.08),transparent 30%),
+linear-gradient(145deg,#08070c,#1a101b 55%,#08070c)}
+.scene.active{display:flex;animation:enter 1s ease}
+@keyframes enter{from{opacity:0;transform:scale(1.025)}to{opacity:1;transform:none}}
+.content{width:min(650px,92vw);position:relative;z-index:5}
+.kicker{font-family:system-ui,sans-serif;text-transform:uppercase;letter-spacing:4px;font-size:.66rem;color:#e6b5cb}
+.name{font-family:system-ui,sans-serif;letter-spacing:4px;color:#f2c5d8;font-size:1rem;margin-bottom:12px}
+h1{font-size:clamp(2.7rem,10vw,6rem);line-height:.94;margin:15px 0;background:linear-gradient(90deg,#fff,#ffd7e7,#dcd4ff);-webkit-background-clip:text;color:transparent}
+h2{font-size:clamp(1.8rem,6vw,3rem);margin:15px 0}
+p{font-size:1.03rem;line-height:1.75;color:#e9e2eb;max-width:570px;margin:10px auto}
+.small{font-family:system-ui,sans-serif;font-size:.78rem;color:#aaa2ad}
+button{margin-top:25px;padding:13px 27px;border-radius:999px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;font-weight:700;cursor:pointer}
+button:hover{background:rgba(255,255,255,.16);transform:translateY(-2px)}
+.glowheart{font-size:5rem;animation:pulse 1.4s infinite;filter:drop-shadow(0 0 25px rgba(255,150,200,.3))}
+@keyframes pulse{50%{transform:scale(1.13)}}
+.card{padding:25px;border:1px solid rgba(255,255,255,.11);border-radius:26px;background:rgba(255,255,255,.045);line-height:1.8}
+.months{display:flex;align-items:center;justify-content:center;gap:0;margin:30px auto 20px;max-width:580px}
+.mitem{width:145px}.circle{width:62px;height:62px;border-radius:50%;margin:auto;display:grid;place-items:center;border:1px solid #e4b4c9;background:#17101c;font-family:system-ui;font-weight:800;font-size:1.1rem;box-shadow:0 0 22px rgba(228,180,201,.13)}
+.connector{width:65px;height:1px;background:linear-gradient(90deg,#e4b4c9,#c9bddc)}
+.typing{min-height:95px}
+.count{font-family:system-ui,sans-serif;font-size:clamp(5rem,20vw,10rem);font-weight:800;color:#f0c4d8;text-shadow:0 0 40px rgba(240,196,216,.28)}
+.balloon{position:fixed;bottom:-90px;font-size:45px;z-index:2;opacity:.7;animation:rise 10s linear forwards}
+@keyframes rise{to{transform:translateY(-120vh);opacity:0}}
+.heart{position:fixed;bottom:-30px;z-index:3;font-size:20px;opacity:.55;animation:float 8s linear forwards}
+@keyframes float{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+.conf{position:fixed;top:-20px;z-index:20;font-size:18px;animation:fall 3.5s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+</style>
+</head>
+<body>
+
+<section class="scene active" id="s1">
+<div class="content">
+<div class="glowheart">❤️</div>
+<div class="kicker">a little midnight surprise</div>
+<div class="name" id="name1">FOR BIRTHDAY BOY</div>
+<h1>Happy Birthday,<br>Birthday Boy.</h1>
+<p>Before your day properly begins, I wanted to give you something small… but made just for you.</p>
+<button onclick="go(2)">Open your surprise ✨</button>
+</div>
+</section>
+
+<section class="scene" id="s2">
+<div class="content">
+<div class="kicker">a little look back</div>
+<h2>It feels like yesterday…</h2>
+<p id="type1" class="typing"></p>
+<button onclick="go(3)">Keep going ❤️</button>
+</div>
+</section>
+
+<section class="scene" id="s3">
+<div class="content">
+<div class="kicker">five months of memories</div>
+<h2>Somehow, five months became this. ❤️</h2>
+<div class="card">
+<p>From the first conversations to talking every single day…</p>
+<p>From simple <b>good mornings</b> and <b>good nights</b> to all the random, silly conversations in between…</p>
+<p>These past <b>almost 5 months</b> have quietly become some really special memories.</p>
+<p>And now there's a new chapter to celebrate:</p>
+<h2 style="margin:8px 0">Your 17th year. ✨</h2>
+<p class="small">Not just another birthday — a new year of your life, with lots more memories waiting to happen.</p>
+</div>
+<button onclick="go(4)">There's more…</button>
+</div>
+</section>
+
+<section class="scene" id="s4">
+<div class="content">
+<div class="kicker">what I want you to know</div>
+<h2>You became special without me even noticing. ❤️</h2>
+<p>I genuinely love our everyday conversations, the way we can talk about completely random things, and how your messages became a normal part of my day.</p>
+<p>Thank you for being patient with me and for always being there.</p>
+<button onclick="go(5)">One final thing…</button>
+</div>
+</section>
+
+<section class="scene" id="s5">
+<div class="content">
+<div class="kicker">and now…</div>
+<div class="count" id="count">3</div>
+<p id="countText">A tiny dramatic birthday countdown. 😂</p>
+</div>
+</section>
+
+<section class="scene" id="s6">
+<div class="content">
+<div class="glowheart">💗</div>
+<div class="kicker">the birthday message</div>
+<h1>Happy 17th,<br><span id="name2">Vansh</span> 🎂</h1>
+<p>I'm really glad these past five months brought you into my life.</p>
+<p>May 17 bring you happiness, success, amazing memories and everything you've been wishing for.</p>
+<p><b>And yes… love you too. ❤️🫶🏻</b></p>
+<button onclick="finish()">Finish ✨</button>
+</div>
+</section>
+
+<section class="scene" id="s7">
+<div class="content">
+<div class="kicker">end credits</div>
+<h1>Here's to more memories. ✨</h1>
+<p>More good mornings.<br>More good nights.<br>More random conversations.<br>More reasons to laugh.</p>
+<p class="small">Happy Birthday once again. ❤️</p>
+</div>
+</section>
+
+<script>
+/* CHANGE ONLY THIS LINE */
+const NAME="Vansh";
+document.getElementById("name1").textContent="FOR BIRTHDAY BOY";
+document.getElementById("name2").textContent="Vansh";
+
+const msg="I never thought that simply knowing each other would turn into talking every day, wishing each other good morning and good night, and becoming this close. Somehow, these past few months became something really special to me.";
+let typed=false;
+function typeText(){
+ if(typed)return;typed=true;let i=0,el=document.getElementById("type1");
+ const t=setInterval(()=>{el.textContent=msg.slice(0,++i);if(i>=msg.length)clearInterval(t)},30);
+}
+function go(n){
+ document.querySelectorAll(".scene").forEach(s=>s.classList.remove("active"));
+ document.getElementById("s"+n).classList.add("active");
+ if(n===2)typeText();
+ if(n===5)countdown();
+}
+function countdown(){
+ let n=3,el=document.getElementById("count"),txt=document.getElementById("countText");
+ el.textContent=n;
+ const timer=setInterval(()=>{
+  n--;
+  if(n>0){el.textContent=n}
+  else{
+   clearInterval(timer);
+   el.textContent="17 🎂";
+   txt.textContent="Today is officially your day.";
+   setTimeout(()=>go(6),1300);
+  }
+ },850);
+}
+function finish(){
+ go(7);
+ for(let i=0;i<100;i++){
+  const c=document.createElement("div");c.className="conf";
+  c.textContent=["✨","🎉","❤️","💗","🎈"][Math.floor(Math.random()*5)];
+  c.style.left=Math.random()*100+"vw";
+  c.style.animationDelay=Math.random()*1.1+"s";
+  document.body.appendChild(c);setTimeout(()=>c.remove(),4500);
+ }
+}
+setInterval(()=>{
+ const h=document.createElement("div");h.className="heart";
+ h.textContent=["♡","♥","💗","✦"][Math.floor(Math.random()*4)];
+ h.style.left=Math.random()*100+"vw";
+ h.style.animationDuration=(7+Math.random()*5)+"s";
+ document.body.appendChild(h);setTimeout(()=>h.remove(),13000);
+},700);
+setInterval(()=>{
+ const b=document.createElement("div");b.className="balloon";
+ b.textContent=["🎈","🎈","🎈"][Math.floor(Math.random()*3)];
+ b.style.left=Math.random()*100+"vw";
+ b.style.animationDuration=(8+Math.random()*5)+"s";
+ document.body.appendChild(b);setTimeout(()=>b.remove(),14000);
+},1700);
+</script>
+</body>
+</html>
